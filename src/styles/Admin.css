@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap");
+.container-admin {
+  font-family: "Raleway";
+}
+
+.container-admin .left-side {
+  width: 250px;
+}
+
+.container-admin .left-side .logo-box {
+  background: -webkit-gradient(linear, left top, left bottom, from(#161e31), color-stop(#1b2b42), to(#223a56));
+  background: linear-gradient(#161e31, #1b2b42, #223a56);
+}
+
+.container-admin .left-side .logo-box .logo {
+  width: 130px;
+}
+
+.container-admin .left-side .profile-box {
+  background: url(../assets/img/bg2.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 9rem;
+}
+
+.container-admin .left-side .profile-box .cover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#161e31), color-stop(#1b2b42), to(#223a56));
+  background: linear-gradient(#161e31, #1b2b42, #223a56);
+  opacity: 0.2;
+}
+
+.container-admin .left-side .navigation {
+  background: -webkit-gradient(linear, left top, left bottom, from(#161e31), color-stop(#1b2b42), to(#223a56));
+  background: linear-gradient(#161e31, #1b2b42, #223a56);
+}
+
+.container-admin .left-side .navigation ul li {
+  width: 100%;
+  height: 40px;
+  background: #223a56;
+  margin-top: 10px;
+}
+
+.container-admin .right-side {
+  margin-left: 250px;
+  background-color: #e6effa;
+}
+
+.container-admin .right-side .content-right {
+  font-family: 'Roboto',sans-serif;
+}
+
+.container-admin .right-side .btn-search {
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
+.container-admin .right-side .btn-search:hover {
+  opacity: 0.75;
+}
+
+.container-admin .btn-action {
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+/*# sourceMappingURL=Admin.css.map */

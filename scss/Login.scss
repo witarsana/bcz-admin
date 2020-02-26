@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap');
+
+.container{
+    background: url(../assets/img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: 'Raleway',;
+    .logo{
+        width: 250px;
+    }
+
+    .box-input{
+        width: 350px;
+
+        .btn-login{
+            transition: opacity .2s ease-in-out;
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+
+        .see-available{
+            transition: opacity .2s ease-in-out;
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+
+    }
+}
