@@ -16,9 +16,10 @@ function Login(props) {
         if (userName.current.value === 'admin' && password.current.value ==='admin'){
             setUserLogin({username:userName.current.value, password: password.current.value});
             setStatus(true);
-            // alert(JSON.stringify(props.history));
-            // props.history.action = "POP";
             history.push('/admin');
+            //sad finnally add this line, 
+            //history push doesn't work in some condition
+            window.location.href= "/admin";
         }else{
             setStatus(false);
         }

@@ -48,6 +48,7 @@ export default function Userlist() {
 
     const editAct = (id) =>{
         //setUserSelect(users.find(usr=> usr.id === id));
+        setStatusSave('Edit');
         const userLocal = JSON.parse(localStorage.getItem('bczadmin.user'));
         const userLoc = userLocal.find(usr=> usr.id === id)
         setUserSelect(userLoc);
@@ -131,7 +132,7 @@ export default function Userlist() {
             </span>
 
             {/* Card for Table */}
-            <div className="card px-4 py-8 rounded mt-10 w-full shadow bg-white flex flex-col mb-10">
+            <div className="card px-4 py-8 rounded mt-10 w-full shadow bg-white flex flex-col mb-20">
                 <span className="add-container flex justify-start items-center">
                     <h1 className="font-bold text-gray-700 mb-2">List of User</h1>
                     <button onClick={newAct} className="w-12 text-blue-500 hover:opacity-75 transition-opacity ease-in-out focus:outline-none rounded-full ml-4 h-12 bg-white shadow-outline flex">
