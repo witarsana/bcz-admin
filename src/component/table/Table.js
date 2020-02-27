@@ -98,9 +98,9 @@ class Table extends Component {
     
     render(){
         return (
-            <div>
-            <span className="filter-table flex justify-end items-center">
-                <input onChange={this.updateSearch} placeholder="Type something..." className="border shadow-inner text-gray-700 text-sm rounded-tl focus:outline-none rounded-bl px-2 py-2 w-56 h-8" />
+            <div className="w-full overflow-x-auto"> 
+            <span className="filter-table flex justify-center sm:justify-center md:justify-end xl:justify-end items-center mt-2">
+                <input onChange={this.updateSearch} placeholder="Type something..." className="border shadow-inner text-gray-700 text-sm rounded-tl focus:outline-none rounded-bl px-2 py-2 w-56 h-8 " />
                 <button onClick={this.searchAction} className="h-8 btn-search flex shadow-inner text-gray-300 w-10 rounded-tr focus:outline-none rounded-br bg-blue-500">
                     <svg className="fill-current m-auto" width="20" height="20" viewBox="0 0 24 24">
                         <g fill="">

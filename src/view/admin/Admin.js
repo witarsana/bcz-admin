@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Switch,Route,useRouteMatch}  from 'react-router-dom'
 
 //css
@@ -12,11 +12,25 @@ import UserList from '../user/Userlist';
 
 export default function Admin() {
     let {path, url} = useRouteMatch();
+    const [statusOpen,setStatusOpen] = useState(false); 
+
+    const toggleButton = ()=>{
+        setStatusOpen(!statusOpen);
+    }
     return (
         <div className="container-admin w-screen  flex justify-between relative">
-            <div className="left-side fixed shadow-2xl h-screen z-20 flex flex-col">
-                <span className="logo-box h-12  block w-full flex shadow-lg">
-                    <img className="logo m-auto" src={require("../../assets/img/logo.png")}/>
+            <div className={statusOpen?'left-side open fixed shadow-2xl h-screen z-20 flex flex-col':'left-side fixed shadow-2xl h-screen z-20 flex flex-col'}>
+                <span className="place-box flex justify-between items-center">
+                    <span className="logo-box h-12  block w-full flex shadow-lg">
+                        <img className="logo m-auto" src={require("../../assets/img/logo.png")}/>
+                    </span>
+                    <div onClick={toggleButton} className="box-button text-white  mr-2 cursor-pointer w-12 flex block sm:block md:hidden xl:hidden  h-8 relative cursor-pointer rounded  ml-2">
+                        <svg className="fill-current" width="30" height="30" viewBox="0 0 48 48">
+                            <g fill="">
+                                <path d="M38 12.83L35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z"></path>
+                            </g>
+                        </svg>
+                    </div>
                 </span>
                 <span className="profile-box w-full  relative flex justify-center items-center">
                     <span className="cover absolute w-full h-full "></span>
@@ -32,7 +46,7 @@ export default function Admin() {
             </div>
             <div className="right-side flex-1  h-screen overflow-hidden z-10 ">
                 <div className="header-right bg-gray-100 text-gray-700 w-full h-12 shadow flex justify-between items-center">
-                    <div className="box-button w-12 flex  h-8 border relative cursor-pointer rounded bg-gray-200 ml-2">
+                    <div onClick={toggleButton} className="box-button cursor-pointer w-12 flex block sm:block md:hidden xl:hidden  h-8 border relative cursor-pointer rounded bg-gray-200 ml-2">
                         <svg className="m-auto"  width="30" height="30" viewBox="0 0 48 48">
                             <g fill="#111111">
                                 <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>

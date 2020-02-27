@@ -7,6 +7,11 @@
   width: 250px;
 }
 
+.container-admin .left-side .place-box {
+  background: -webkit-gradient(linear, left top, left bottom, from(#161e31), color-stop(#1b2b42), to(#223a56));
+  background: linear-gradient(#161e31, #1b2b42, #223a56);
+}
+
 .container-admin .left-side .logo-box {
   background: -webkit-gradient(linear, left top, left bottom, from(#161e31), color-stop(#1b2b42), to(#223a56));
   background: linear-gradient(#161e31, #1b2b42, #223a56);
@@ -62,5 +67,23 @@
 .container-admin .btn-action {
   -webkit-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .container-admin .left-side {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    transition: -webkit-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  }
+  .container-admin .left-side.open {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .container-admin .right-side {
+    margin-left: 0;
+  }
 }
 /*# sourceMappingURL=Admin.css.map */
