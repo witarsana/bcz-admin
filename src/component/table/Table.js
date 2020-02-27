@@ -153,14 +153,14 @@ class Table extends Component {
                 <p>{this.state.start + 1} - {this.state.until+ 1 } from {this.state.totalData}</p>
                 <span className="page-navigation flex">
                     <a  onClick={this.backClick} className={this.state.curentPage===1 || this.state.dataManipulate.length==0? 'text-gray-200' : 'cursor-pointer'}>
-                        <svg className="fill-current"  width="30" height="30" viewBox="0 0 48 48"><title>ic_chevron_left_48px</title>
+                        <svg className="fill-current"  width="30" height="30" viewBox="0 0 48 48"><title>Prev Page</title>
                             <g fill="">
                                 <path d="M30.83 14.83L28 12 16 24l12 12 2.83-2.83L21.66 24z"></path>
                             </g>
                         </svg>
                     </a>
                     <a onClick={this.nextClick} className={this.state.curentPage>=this.state.totalPage? 'text-gray-200':'cursor-pointer'}>
-                    <svg className="fill-current" width="30" height="30" viewBox="0 0 48 48"><title>ic_chevron_right_48px</title>
+                    <svg className="fill-current" width="30" height="30" viewBox="0 0 48 48"><title>Next Page</title>
                         <g fill="">
                             <path d="M20 12l-2.83 2.83L26.34 24l-9.17 9.17L20 36l12-12z"></path>
                         </g>
