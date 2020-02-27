@@ -44,13 +44,14 @@ class Table extends Component {
         this.state.totalData = this.state.dataFilter.length;
         //get total page
         this.state.totalPage= Math.ceil(this.state.dataFilter.length/this.state.showRows);
+        this.state.curentPage = 1;
         this.showDataByPage(1,this.state.dataFilter);
     }
 
     showDataByPage = (curentPage,dataProcess) => {
         this.state.start = (curentPage -1) * this.state.showRows;
         this.state.until = this.state.start + (this.state.showRows-1);
-        if (this.state.until>this.state.totalData){
+        if (this.state.until>(this.state.totalData-1)){
             this.state.until = this.state.totalData-1;
         }
 
